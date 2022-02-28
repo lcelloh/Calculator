@@ -1,0 +1,89 @@
+/* colors: 0D5C63 44A1A0 78CDD7 247B7B F4B860 FFA400 */
+
+body{
+    background-color: #78CDD7;
+    margin: 0;
+} 
+
+#main{
+background-color: #175c64  ;
+width: 20rem;
+height: 25rem;
+margin:auto auto;
+margin-top: 10%;
+margin-bottom: 10%;
+padding: 2.5%;
+border-radius: 7%;
+border-style: solid;
+border-color: #133A3F;
+display: grid;
+grid-template-columns: repeat(4, 4fr);
+grid-template-rows: repeat(6, 4fr);
+grid-gap: 0.5em;
+}
+
+#screen{
+    grid-column-start: 1 ;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 1em;
+    border-style: solid;
+    border-color: #133A3F;
+    background-color: #3f8e97;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1em;
+}
+
+#operands{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+}
+
+#result{
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+}
+
+button{
+font-family: sans-serif;
+font-weight: 400;
+color: #cacaca;
+cursor: pointer;
+}
+
+.signs{
+    border-radius: 40%;
+    border-color: #133A3F;
+    background-color: #ffa600e3;
+    color: #2b2a2a;
+}
+
+.numbers{
+    border-radius:1em;
+    border-color: #133A3F;
+    background-color: #00728f;
+    transition-duration: 0.4s;
+}
+.numbers:hover {
+    background-color: #3598a3; 
+    color: #133A3F;
+}
+
+#ac{
+    grid-column-start: 1 ;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border-radius: 40%;
+    border-color: #133A3F;
+    background-color: #005064;
+}
+
+
