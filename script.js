@@ -34,23 +34,29 @@ function handleClick(id) {
          let res = operate(sign, parseInt(firstNumber.join("")), 
           parseInt(secondNumber.join("")))
         result.innerText = res
-      }
-    } else if (isNaN(id) == false) {
+      }else if (isNaN(id) == true){
+        res = operate(sign, parseInt(firstNumber.join("")), 
+          parseInt(secondNumber.join("")))
+          result.innerText = res
+          firstNumber = []
+          secondNumber = []
+          firstNumber.push(res)
+          sign = id
+          operands.innerText = `${firstNumber.join("")} ${sign}`}
+    } else if (isNaN(id) == false && id !== "0") {
       secondNumber.push(id);
       let secondNumberOutput = secondNumber.join("");
       operands.innerText = `${firstNumber.join("")} ${sign} ${secondNumberOutput}`;
     }
-  } else if (isNaN(id) === false) {
+  
+  } else if (isNaN(id) === false && id !==  "0") {
     firstNumber.push(id);
     let firstNumberOutput = firstNumber.join("");
     operands.innerText = firstNumberOutput;
-  } else if (isNaN(id) === true && firstNumber.length > 1 && id != "=") {
+  } else if (isNaN(id) === true && firstNumber.length > 0 && id != "=") {
     sign = id;
     operands.innerText = `${firstNumber.join("")} ${sign} `;
   }
-  console.log(sign);
-  console.log(firstNumber);
-  console.log(secondNumber);
 }
 
 function operate(sign, a, b) {
@@ -65,7 +71,7 @@ function operate(sign, a, b) {
       return multiply(a, b);
       break;
     case "/":
-      return subtract(a, b);
+      return divide(a, b);
       break;
   }
 }
